@@ -13,8 +13,13 @@ if (!defined('ABSPATH')) die('No direct access allowed');
 function woo_ship_price($rates, $package){
     
     if(isset($rates['flat_rate:1'])){
-        echo "Set!";
-        $rates['flat_rate:1']->cost = 100;
+        $amt_cart_items = WC()->cart->cart_contents_count;
+
+        if ($amt_cart_items > 1){
+            $rates['flat_rate:1']->cost = 5;
+        } else {
+            $rates['flat_rate:1']->cost = 3.50;
+        }
     }
 
     return $rates;
