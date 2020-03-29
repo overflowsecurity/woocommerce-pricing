@@ -10,7 +10,14 @@
 if (!defined('ABSPATH')) die('No direct access allowed');
 
 
+function woo_ship_price($rates, $package){
+    foreach($rates as $id => $rate) {
+        echo $id . '';
+    }
 
+    return $rates;
+}
 
+add_filter('woocommerce_package_rates', 'woo_ship_price', 10,2);
 
 ?>
