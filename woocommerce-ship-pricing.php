@@ -18,6 +18,6 @@ function woo_ship_price($rates, $package){
     return $rates;
 }
 
-add_filter('woocommerce_package_rates', array($this, 'woo_ship_price'), 10, 2 ); 
+add_filter('woocommerce_package_rates', 'woo_ship_price', 10, 2 ); 
 
 ?>
