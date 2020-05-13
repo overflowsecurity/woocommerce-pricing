@@ -3,7 +3,9 @@
     Plugin Name: Woocommerce Shipping by Item Pricing
     description: This plugin makes it possible to price shipping by number of items.
     Author: Justin Tharpe
-    Version: Beta 1.0.0
+    Version: 1.0.0
+    Tested Up To: 5.4.1
+    WC tested up to: 4.1.0
 */
 
 
